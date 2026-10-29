@@ -1,6 +1,11 @@
 # Changelog
 
 ### master
+- Guard the saved pane title with a `:` prefix like the other optional
+  columns. An empty title (a TUI clears it on exit) collapsed the tab-separated
+  columns on save, and the restore put the pane in an unrelated directory with
+  the saved path as its title. Re-save once after upgrading: a file saved by an
+  older version loses the first character of every pane title on restore.
 - Remove deprecated "restoring shell history" feature.
 
 ### v4.0.0, 2022-04-10
