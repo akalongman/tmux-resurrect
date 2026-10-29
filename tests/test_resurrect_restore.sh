@@ -22,6 +22,7 @@ restore_tmux_environment_and_save_again() {
 
 main() {
 	install_tmux_plugin_under_test_helper
+	pin_pane_titles_helper
 	setup_before_restore
 	restore_tmux_environment_and_save_again
 
